@@ -53,7 +53,6 @@
                 obj.preview(function(index, file, result){
                     $('#layui-upload-box').html('<li><img src="'+result+'" /><p>上传中</p></li>')
                 });
-
             }
             ,done: function(res){
                 //如果上传失败

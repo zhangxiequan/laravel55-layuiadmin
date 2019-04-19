@@ -4,10 +4,13 @@ Route::post('uploadImg', 'PublicController@uploadImg')->name('uploadImg');
 //发送短信
 Route::post('/sendMsg', 'PublicController@sendMsg')->name('sendMsg');
 
-Route::get('/','Home\IndexController@index')->name('home');
+
 
 //支付
 Route::group(['namespace' => 'Home'], function () {
+    Route::get('/','IndexController@index')->name('home.index');
+    Route::get('/index','IndexController@index')->name('home.index');
+    Route::get('/show/{id}','IndexController@show')->name('home.show');
     //微信支付
     Route::get('/wechatPay', 'PayController@wechatPay')->name('wechatPay');
     //微信支付回调
@@ -30,3 +33,5 @@ Route::group(['namespace'=>'Home','prefix'=>'member','middleware'=>'member'],fun
     //退出
     Route::get('logout', 'MemberController@logout')->name('home.member.logout');
 });
+
+//

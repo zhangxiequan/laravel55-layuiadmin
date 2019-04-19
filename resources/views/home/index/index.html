@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+        <meta name="theme-color" content="#3F51B5">
+        <title>响应式简单实用个人博客网站前端模板</title>
+        <meta name="keywords" content="响应式,简单实用,个人博客,网站前端,前端模板" />
+        <meta name="description" content="响应式简单实用个人博客网站前端模板下载。" /> 
+        <meta name="author" content="js代码" />
+        <meta name="copyright" content="js代码" />
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery-2.0.3.min.js">
+        </script>
+        <script>
+            window.lazyScripts = [];
+        </script>
+        <style type="text/css">
+        .u {border-radius: 50%;}
+        </style>
+    </head>
+    
+    <body>
+        <div id="loading" class="active">
+        </div>
+        <aside id="menu">
+            <div class="inner flex-row-vertical">
+                <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light"
+                id="menu-off">
+                    <i class="icon icon-lg icon-close">
+                    </i>
+                </a>
+                <div class="brand-wrap" style="background-image:url(images/brand.jpg)">
+                    <div class="brand">
+                        <a href="#" class="avatar waves-effect waves-circle waves-light">
+                            <img style="border-radius: 50%;" src="picture/590fcf28a8654463.png">
+                        </a>
+                        <hgroup class="introduce">
+                            <h5 class="nickname">
+                                js代码
+                            </h5>
+                            <a href="javascript:;" title="全栈工程师" class="mail">
+                                全栈工程师
+                            </a>
+                        </hgroup>
+                    </div>
+                </div>
+                <div class="scroll-wrap flex-col">
+                    <ul class="nav">
+                        <li class="waves-block waves-effect  ">
+                            <a href="index.html">
+                                <i class="icon icon-lg icon-home">
+                                </i>
+                                首页
+                            </a>
+                        </li>
+                        <li class="waves-block waves-effect ">
+                            <a href="archives.html">
+                                <i class="icon icon-lg icon-archives">
+                                </i>
+                                档案
+                            </a>
+                        </li>
+                        <li class="waves-block waves-effect">
+                            <a href="1.html">
+                                <i class="icon icon-lg
+                                icon-comment
+                                ">
+                                </i>
+                                php文章
+                            </a>
+                        </li>
+                        <li class="waves-block waves-effect">
+                            <a href="2.html">
+                                <i class="icon icon-lg
+                                icon-asterisk
+                                ">
+                                </i>
+                                mysql文章
+                            </a>
+                        </li>
+                        <li class="waves-block waves-effect">
+                            <a href="1.html">
+                                <i class="icon icon-lg
+                                icon-calendar
+                                ">
+                                </i>
+                                心情随笔
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <main id="main">
+            <header class="top-header" id="header">
+                <div class="flex-row">
+                    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on"
+                    id="menu-toggle">
+                        <i class="icon icon-lg icon-navicon">
+                        </i>
+                    </a>
+                    <div class="flex-col header-title ellipsis">
+                        js代码的博客
+                    </div>
+                    <div class="search-wrap" id="search-wrap">
+                        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light"
+                        id="back">
+                            <i class="icon icon-lg icon-chevron-left">
+                            </i>
+                        </a>
+                        <form action="#" onsubmit="$('#search').trigger('click');return false;">
+                            <input id="key" class="search-input" name="keyword" autocomplete="off"
+                            placeholder="输入感兴趣的关键字">
+                            <a href="javascript:;" onclick="if($('.search-wrap').is('.in')){location.href='#';}"
+                            class="header-icon waves-effect waves-circle waves-light" id="search" name="keywords">
+                                <i class="icon icon-lg icon-search">
+                                </i>
+                            </a>
+                        </form>
+                    </div>
+                    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light"
+                    id="menuShare">
+                        <i class="icon icon-lg icon-share-alt">
+                        </i>
+                    </a>
+                </div>
+            </header>
+            <header class="content-header index-header">
+                <div class="container fade-scale">
+                    <h1 class="title">
+                        js代码的博客
+                    </h1>
+                    <h5 class="subtitle">
+                        认证高级讲师
+                    </h5>
+                </div>
+            </header>
+            <div class="container body-wrap">
+                <ul class="post-list">
+                    <li class="post-list-item fade">
+                        <article id="post-data-sync-in-vue-single-page-application" class="article-card article-type-post"
+                        itemprop="blogPost">
+                            <div class="post-meta">
+                                <time class="post-time" title="2017-07-24" datetime="2017-07-24" itemprop="datePublished">
+                                    2017年07月24日
+                                </time>
+                            </div>
+                            <h3 class="post-title" itemprop="name">
+                                <a class="post-title-link" href="1.html">
+                                    PHP加密函数—md5()函数加密实例用法
+                                </a>
+                            </h3>
+                            <div class="post-content" id="post-content" itemprop="postContent">
+                                <a href="1.html" class="post-more waves-effect waves-button">
+                                    阅读全文…
+                                </a>
+                            </div>
+                            <div class="post-footer">
+                                <ul class="article-tag-list">
+                                    <li class="article-tag-list-item">
+                                        <a class="article-tag-list-link">
+                                            标签可能跑路了..
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+                <nav id="page-nav">
+                    <span class="disabled_page">
+                        首页
+                    </span>
+                    <span class="disabled_page">
+                        上一页
+                    </span>
+                    <a href="javascript:void(0)" class="active">
+                        1
+                    </a>
+                    <span class="disabled_page">
+                        下一页
+                    </span>
+                    <span class="disabled_page">
+                        尾页
+                    </span>
+                </nav>
+            </div>
+            <script>
+                $(function() {
+                    var activea = $("#page-nav a.active");
+                    activea.after('<a class="page-number current waves-effect waves-button">' + activea.html() + '</a>').remove();
+                });
+            </script>
+            ﻿
+            <footer class="footer">
+                <div class="top">
+                </div>
+                <div class="bottom">
+                    <p>
+                        <span>
+                            <a href="javascript:;" target="_blank">
+                            </a>
+                            <br>
+                            <a href="javascript:;" target="_blank">
+                            </a>
+                            <a href="javascript:;" target="_blank">
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </footer>
+            <script src="js/waves.min.js">
+            </script>
+        </main>
+        <div class="mask" id="mask">
+        </div>
+        <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light">
+            <span class="icon icon-lg icon-chevron-up">
+            </span>
+        </a>
+        <div class="mask jiathis_style_32x32" id="mask">
+        </div>
+        <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light">
+            <span class="icon icon-lg icon-chevron-up">
+            </span>
+        </a>
+        <div class="global-share" id="globalShare">
+            <ul class="reset share-icons">
+                <li class="jiathis_button_tsina">
+                    <a class="weibo share-sns " target="_blank" href="javascript:;" onclick="window.open('http://service.weibo.com/share/share.php?url='+location.href);"
+                    data-title="微博">
+                        <i class="icon icon-weibo">
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a class="qq share-sns" target="_blank" href="javascript:;" onclick="window.open('http://connect.qq.com/widget/shareqq/index.html?url='+location.href);"
+                    data-title=" QQ">
+                        <i class="icon icon-qq">
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a class="facebook share-sns" target="_blank" href="javascript:;" onclick="window.open('https://www.facebook.com/sharer/sharer.php?url='+location.href);"
+                    data-title=" Facebook">
+                        <i class="icon icon-facebook">
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a class="twitter share-sns" target="_blank" href="javascript:;" onclick="window.open('https://twitter.com/intent/tweet?text=js代码的博客='+location.href);"
+                    data-title=" Twitter">
+                        <i class="icon icon-twitter">
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a class="google share-sns" target="_blank" href="javascript:;" onclick="window.open('https://plus.google.com/share?url='+location.href);"
+                    data-title=" Google+">
+                        <i class="icon icon-google-plus">
+                        </i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="page-modal wx-share" id="wxShare">
+            <a class="close" href="javascript:;">
+                <i class="icon icon-close">
+                </i>
+            </a>
+        </div>
+        <script src="js/waves.min.js">
+        </script>
+        <script>
+            var BLOG = {
+                ROOT: "/",
+                SHARE: !0,
+                REWARD: !1
+            };
+        </script>
+        <script src="js/main.min.js">
+        </script>
+        <div class="search-panel" id="search-panel">
+            <ul class="search-result" id="search-result">
+            </ul>
+        </div>
+        <template id="search-tpl">
+            <li class="item">
+                <a href="{path}.html" class="waves-block waves-effect">
+                    <div class="title ellipsis" title="{title}">
+                        {title}
+                    </div>
+                    <div class="flex-row flex-middle">
+                        <div class="tags ellipsis">
+                            {tags}
+                        </div>
+                        <time class="flex-col time">
+                            {date}
+                        </time>
+                    </div>
+                </a>
+            </li>
+        </template>
+        <script>
+            $(document).on("click", "#search",
+            function() {
+                if ($('.search-wrap').is('.in')) {
+                    if ($.trim($('#key').val()) == "") {
+                        $('.search-wrap').removeClass('in');
+                    } else {
+                        location.href = "#";
+                    }
+                } else {
+                    $('.search-wrap').addClass('in');
+                }
+
+            });
+        </script>
+    </body>
+
+</html>

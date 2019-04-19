@@ -6,7 +6,7 @@ use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class IndexController extends Controller
+class ArticleController extends Controller
 {
     private $request;
     public function __construct(Request $request)
@@ -14,6 +14,12 @@ class IndexController extends Controller
         $this->request = $request;
     }
     
+    /**
+     *  文章列表
+     * @author: zhangxiequan
+     * @date  : 2019/4/18 11:04
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
         $categoryId = $this->request->query('category_id', 1);
@@ -30,9 +36,10 @@ class IndexController extends Controller
      */
     public function show($id)
     {
-        $info = Article::select(['*'])->with('category:id,name')->findOrfail(['id'=>$id])->first();
-     
+        $info = Article::select(['*'])->with('category:id,name')->findOrfail(['id'=>$id]);
+    
         return view('home.index.show',['info'=>$info]);
     }
+
 
 }
