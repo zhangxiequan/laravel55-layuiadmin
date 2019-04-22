@@ -36,10 +36,10 @@
     <header class="content-header index-header">
         <div class="container fade-scale">
             <h1 class="title">
-                js代码的博客sss
+                彼岸繁华的博客
             </h1>
             <h5 class="subtitle">
-                认证高级讲师
+                攻城狮
             </h5>
         </div>
     </header>
