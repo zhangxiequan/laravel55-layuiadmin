@@ -17,9 +17,12 @@ class IndexController extends Controller
     public function index()
     {
         $categoryId = $this->request->query('category_id', 0);
-        
+        $keyword = trim($this->request->query('kw',null)) ?? null;
         $list = Article::select(['*'])
             ->with(['category:id,name','tags'])
+            ->when($keyword, function ($query) use ($keyword) {
+                $query->where(['title','like','%'.$keyword.'%']);
+            })
             ->when($categoryId,function ($query) use ($categoryId){
                 $query->where(['category_id'=>$categoryId]);
             })

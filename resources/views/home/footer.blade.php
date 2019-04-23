@@ -3,15 +3,15 @@
     </div>
     <div class="bottom">
         <p>
-                        <span>
-                            <a href="javascript:;" target="_blank">123132
-                            </a>
-                            <br>
-                            <a href="javascript:;" target="_blank">打发斯蒂芬
-                            </a>
-                            <a href="javascript:;" target="_blank">789
-                            </a>
-                        </span>
+            <span>
+                <a href="javascript:;" target="_blank">cshixi.com
+                </a>
+                <br>
+                <a href="javascript:;" target="_blank">ibodao.com
+                </a> <br>
+                <a href="javascript:;" target="_blank">x.cshixi.com
+                </a>
+            </span>
         </p>
     </div>
 </footer>

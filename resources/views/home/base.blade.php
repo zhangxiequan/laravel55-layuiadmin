@@ -32,8 +32,7 @@
 <div class="mask" id="mask">
 </div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light">
-            <span class="icon icon-lg icon-chevron-up">
-            </span>
+            <span class="icon icon-lg icon-chevron-up"></span>
 </a>
 <div class="mask jiathis_style_32x32" id="mask">
 </div>
