@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Home;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cache;
 
 class IndexController extends Controller
 {
@@ -13,12 +14,17 @@ class IndexController extends Controller
     {
         $this->request = $request;
     }
-    
     public function index()
     {
-        $categoryId = $this->request->query('category_id', 1);
-        $list = Article::select(['*'])->with('category')->where(['category_id'=>$categoryId])->paginate();
+        $categoryId = $this->request->query('category_id', 0);
         
+        $list = Article::select(['*'])
+            ->with(['category:id,name','tags'])
+            ->when($categoryId,function ($query) use ($categoryId){
+                $query->where(['category_id'=>$categoryId]);
+            })
+           ->paginate();
+//        dd($list->toArray());
         return view('home.index.index',['list'=>$list]);
     }
     
@@ -30,8 +36,10 @@ class IndexController extends Controller
      */
     public function show($id)
     {
-        $info = Article::select(['*'])->with('category:id,name')->findOrfail(['id'=>$id])->first();
-     
+        $minutes = 1;
+        $info = Cache::remember('Article_'.$id,$minutes,function () use($id) {
+            return Article::select(['*'])->with(['category:id,name','tags'])->findOrfail(['id'=>$id])->first();
+        });
         return view('home.index.show',['info'=>$info]);
     }
 

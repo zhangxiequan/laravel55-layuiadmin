@@ -5,10 +5,10 @@
             <i class="icon icon-lg icon-close">
             </i>
         </a>
-        <div class="brand-wrap" style="background-image:url(/static/home/blog/images/brand.jpg)">
+        <div class="brand-wrap" style="background-image:url({{URL::asset('/static/home/blog/images/brand.jpg')}})">
             <div class="brand">
                 <a href="#" class="avatar waves-effect waves-circle waves-light">
-                    <img style="border-radius: 50%;" src="images/zxq.jpg">
+                    <img style="border-radius: 50%;" src="{{URL::asset('/images/zxq.jpg')}}" >
                 </a>
                 <hgroup class="introduce">
                     <h5 class="nickname">
@@ -29,40 +29,21 @@
                             首页
                         </a>
                     </li>
-                    <li class="waves-block waves-effect ">
-                        <a href="archives.html">
-                            <i class="icon icon-lg icon-archives">
-                            </i>
-                            档案
-                        </a>
-                    </li>
-                    <li class="waves-block waves-effect">
-                        <a href="1.html">
-                            <i class="icon icon-lg
-                                icon-comment
-                                ">
-                            </i>
-                            php文章
-                        </a>
-                    </li>
-                    <li class="waves-block waves-effect">
-                        <a href="2.html">
-                            <i class="icon icon-lg
-                                icon-asterisk
-                                ">
-                            </i>
-                            mysql文章
-                        </a>
-                    </li>
-                    <li class="waves-block waves-effect">
-                        <a href="1.html">
-                            <i class="icon icon-lg
-                                icon-calendar
-                                ">
-                            </i>
-                            心情随笔
-                        </a>
-                    </li>
+                    @forelse($sidebarCategory as $navList)
+                        <li class="waves-block waves-effect ">
+                            <a href="{{route('home.index',['category_id'=>$navList->id])}}">
+                                <i class="icon icon-lg  {{$navList->icon}}">
+                                </i>
+                                {{$navList->name}}
+                            </a>
+                        </li>
+                    @empty
+                        <li class="waves-block waves-effect ">
+                            <a href="archives.html">
+                                这家伙很懒，什么都没有
+                            </a>
+                        </li>
+                    @endforelse
                 </ul>
             </div>
     </div>

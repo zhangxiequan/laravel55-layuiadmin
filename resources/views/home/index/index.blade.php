@@ -1,4 +1,5 @@
 @extends('home.base')
+@section('title','列表页')
 @section('main-header')
     <header class="top-header" id="header">
         <div class="flex-row">
@@ -57,22 +58,30 @@
                         </time>
                     </div>
                     <h3 class="post-title" itemprop="name">
-                        <a class="post-title-link" href="{{route('home.show',['id'=>$item->id])}}">
+                        <a class="post-title-link" href="{{route('home.show',['id'=>$item->id])}}" target="_blank">
                             {{$item->title}}
                         </a>
                     </h3>
                     <div class="post-content" id="post-content" itemprop="postContent">
-                        <a href="{{route('home.show',['id'=>$item->id])}}" class="post-more waves-effect waves-button">
+                        <a href="{{route('home.show',['id'=>$item->id])}}" target="_blank" class="post-more waves-effect waves-button">
                             阅读全文…
                         </a>
                     </div>
                     <div class="post-footer">
                         <ul class="article-tag-list">
+                            @forelse($item->tags as $tag)
                             <li class="article-tag-list-item">
                                 <a class="article-tag-list-link">
-                                    标签可能跑路了..
+                                    {{$tag->name}}
                                 </a>
                             </li>
+                             @empty
+                                <li class="article-tag-list-item">
+                                    <a class="article-tag-list-link">
+                                        标签可能跑路了..
+                                    </a>
+                                </li>
+                            @endforelse
                         </ul>
                     </div>
                 </article>

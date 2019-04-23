@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <meta name="theme-color" content="#3F51B5">
-    <title>彼岸繁华的-blogs</title>
+    <title>彼岸繁华的博客 | @yield('title', '首页')</title>
     <meta name="keywords" content="响应式,简单实用,个人博客,网站前端,前端模板" />
     <meta name="description" content="响应式简单实用个人博客网站前端模板下载。" />
     <meta name="author" content="js代码" />

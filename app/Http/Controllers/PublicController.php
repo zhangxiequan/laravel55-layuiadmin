@@ -38,7 +38,7 @@ class PublicController extends Controller
             return response()->json($data);
         }
         $newFile = date('Y-m-d')."_".time()."_".uniqid().".".$file->getClientOriginalExtension();
-        $disk = QiniuStorage::disk('qiniu');
+        $disk = QiniuStorage::disk('local');
         $res = $disk->put($newFile,file_get_contents($file->getRealPath()));
         if($res){
             $data = [

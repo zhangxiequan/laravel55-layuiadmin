@@ -1,6 +1,7 @@
 @extends('home.base')
 <link rel="stylesheet" href="/static/home/blog/css/style.css">
 <link rel="stylesheet" href="/static/home/blog/css/pc.css">
+@section('title',$info->title)
 @section('main-header')
     <header class="top-header" id="header">
         <div class="flex-row">
@@ -78,11 +79,19 @@
                 </blockquote>
                 <div class="post-footer">
                     <ul class="article-tag-list">
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link">
-                                标签可能跑路了..
-                            </a>
-                        </li>
+                       @forelse($info->tags as $tag)
+                            <li class="article-tag-list-item">
+                                <a class="article-tag-list-link">
+                                   {{$tag->name}}
+                                </a>
+                            </li>
+                           @empty
+                            <li class="article-tag-list-item">
+                                <a class="article-tag-list-link">
+                                    标签可能跑路了..
+                                </a>
+                            </li>
+                        @endforelse
                     </ul>
                 </div>
             </div>
