@@ -21,12 +21,12 @@ class IndexController extends Controller
         $list = Article::select(['*'])
             ->with(['category:id,name','tags'])
             ->when($keyword, function ($query) use ($keyword) {
-                $query->where(['title','like','%'.$keyword.'%']);
+                $query->where('title', 'like', '%' . $keyword . '%');
             })
             ->when($categoryId,function ($query) use ($categoryId){
                 $query->where(['category_id'=>$categoryId]);
             })
-           ->paginate();
+           ->paginate(10);
 //        dd($list->toArray());
         return view('home.index.index',['list'=>$list]);
     }

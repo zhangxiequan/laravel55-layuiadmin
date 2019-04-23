@@ -11,22 +11,7 @@
             <div class="flex-col header-title ellipsis">
                 彼岸繁华的博客
             </div>
-            <div class="search-wrap" id="search-wrap">
-                <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light"
-                   id="back">
-                    <i class="icon icon-lg icon-chevron-left">
-                    </i>
-                </a>
-                <form action="#" onsubmit="$('#search').trigger('click');return false;">
-                    <input id="key" class="search-input" name="keyword" autocomplete="off"
-                           placeholder="输入感兴趣的关键字">
-                    <a href="javascript:;" onclick="if($('.search-wrap').is('.in')){location.href='#';}"
-                       class="header-icon waves-effect waves-circle waves-light" id="search" name="keywords">
-                        <i class="icon icon-lg icon-search">
-                        </i>
-                    </a>
-                </form>
-            </div>
+            @include('home.search')
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light"
                id="menuShare">
                 <i class="icon icon-lg icon-share-alt">
@@ -96,8 +81,10 @@
                 </article>
             @endforelse
         </ul>
+
         <nav id="page-nav">
-                    <span class="disabled_page">
+            {{$list->links()}}
+                   {{-- <span class="disabled_page">
                         首页
                     </span>
             <span class="disabled_page">
@@ -111,7 +98,7 @@
                     </span>
             <span class="disabled_page">
                         尾页
-                    </span>
+                    </span>--}}
         </nav>
     </div>
 @endsection
