@@ -172,9 +172,9 @@
 <script src="/static/admin/layuiadmin/layui/layui.js"></script>
 <script>
     layui.config({
-        base: '/static/admin/layuiadmin/' //静态资源所在路径
+        base: '/static/admin/layuiadmin/'
     }).extend({
-        index: 'lib/index' //主入口模块
+        index: 'lib/index' //
     }).use('index');
 </script>
 </body>

@@ -9,6 +9,15 @@
     <meta name="description" content="@yield('description', '主营网站建设，移动app开发，微信公众号开发，小程序开发，域名申请、备案，阿里云服务器搭建、运维')" />
     <meta name="author" content="376195259@qq.com" />
     <link rel="stylesheet" href="/static/home/blog/css/style.css">
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b474e9420ab6f8d76aed0d61d0863087";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
     <script src="/static/home/blog/js/jquery-2.0.3.min.js"></script>
     <script>
       window.lazyScripts = [];
