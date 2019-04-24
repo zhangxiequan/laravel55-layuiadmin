@@ -25,10 +25,10 @@
                     </div>
                 </div>
             </div>--}}
-            <div class="layui-form-item" style="margin-bottom: 20px;">
-                <input type="checkbox" name="remember" lay-skin="primary" title="记住密码">
-                <a href="forget.html" class="layadmin-user-jump-change layadmin-link" style="margin-top: 7px;">忘记密码？</a>
-            </div>
+            {{--<div class="layui-form-item" style="margin-bottom: 20px;">--}}
+                {{--<input type="checkbox" name="remember" lay-skin="primary" title="记住密码">--}}
+                {{--<a href="forget.html" class="layadmin-user-jump-change layadmin-link" style="margin-top: 7px;">忘记密码？</a>--}}
+            {{--</div>--}}
             <div class="layui-form-item">
                 <button type="submit" class="layui-btn layui-btn-fluid" lay-submit lay-filter="">登 入</button>
             </div>
@@ -39,7 +39,7 @@
             <a href="javascript:;"><i class="layui-icon layui-icon-login-wechat"></i></a>
             <a href="javascript:;"><i class="layui-icon layui-icon-login-weibo"></i></a>
 
-            <a href="reg.html" class="layadmin-user-jump-change layadmin-link">注册帐号</a>
+            {{--<a href="reg.html" class="layadmin-user-jump-change layadmin-link">注册帐号</a>--}}
         </div>
     </div>
 @endsection

@@ -7,7 +7,7 @@
 | 后台公共路由部分
 |
 */
-Route::group(['namespace'=>'Admin','prefix'=>'admin'],function (){
+Route::group(['namespace'=>'Admin','prefix'=>'system'],function (){
     //登录、注销
     Route::get('login','LoginController@showLoginForm')->name('admin.loginForm');
     Route::post('login','LoginController@login')->name('admin.login');

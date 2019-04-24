@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <meta name="theme-color" content="#3F51B5">
     <title>彼岸繁华的博客 | @yield('title', '首页')</title>
-    <meta name="keywords" content="响应式,简单实用,个人博客,网站前端,前端模板" />
-    <meta name="description" content="响应式简单实用个人博客网站前端模板下载。" />
-    <meta name="author" content="js代码" />
-    <meta name="copyright" content="js代码" />
+    <meta name="keywords" content="@yield('keywords', '西安网站建设,企业建站,微信开发,小程序开发,微信公众号开发,apicloud开发,移动端开发')" />
+    <meta name="description" content="@yield('description', '主营网站建设，移动app开发，微信公众号开发，小程序开发，域名申请、备案，阿里云服务器搭建、运维')" />
+    <meta name="author" content="376195259@qq.com" />
     <link rel="stylesheet" href="/static/home/blog/css/style.css">
-    {{--<script src="/static/home/layui/layui.all.js"  type="text/javascript"></script>--}}
     <script src="/static/home/blog/js/jquery-2.0.3.min.js"></script>
     <script>
       window.lazyScripts = [];
