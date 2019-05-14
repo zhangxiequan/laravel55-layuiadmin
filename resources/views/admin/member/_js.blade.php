@@ -56,6 +56,7 @@
 
             }
             ,done: function(res){
+              console.log(res);
                 //如果上传失败
                 if(res.code == 0){
                     $("#avatar").val(res.url);

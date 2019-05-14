@@ -11,7 +11,7 @@ class PublicController extends Controller
     //图片上传处理
     public function uploadImg(Request $request)
     {
-
+ 
         //上传文件最大大小,单位M
         $maxSize = 10;
         //支持的上传图片类型
@@ -40,6 +40,7 @@ class PublicController extends Controller
         $newFile = date('Y-m-d')."_".time()."_".uniqid().".".$file->getClientOriginalExtension();
         $disk = QiniuStorage::disk('local');
         $res = $disk->put($newFile,file_get_contents($file->getRealPath()));
+        var_dump($res);
         if($res){
             $data = [
                 'code'  => 0,

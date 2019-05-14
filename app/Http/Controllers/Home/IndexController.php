@@ -26,6 +26,7 @@ class IndexController extends Controller
             ->when($categoryId,function ($query) use ($categoryId){
                 $query->where(['category_id'=>$categoryId]);
             })
+            ->latest()
            ->paginate(10);
 //        dd($list->toArray());
         return view('home.index.index',['list'=>$list]);
