@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Category;
+use App\Models\Site;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -29,6 +30,9 @@ class AppServiceProvider extends ServiceProvider
         });
         view()->composer('home.sidebar', function ($view){
             $view->with('sidebarCategory',Category::all());
+        });
+        view()->composer('home.base', function ($view){
+            $view->with('siteSeting',Site::pluck('value','key'));
         });
     }
 
