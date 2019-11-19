@@ -15,7 +15,7 @@
                          彼岸繁华
                     </h5>
                     <a href="javascript:;" title="全栈工程师" class="mail">
-                        全栈工程师
+                        QQ:376195259
                     </a>
                 </hgroup>
             </div>

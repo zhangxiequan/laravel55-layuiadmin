@@ -22,10 +22,10 @@
     <header class="content-header index-header">
         <div class="container fade-scale">
             <h1 class="title">
-                彼岸繁华的博客
+                彼岸繁华
             </h1>
             <h5 class="subtitle">
-                攻城狮
+                不只是做一名工程师，而是要成为一名工匠！
             </h5>
         </div>
     </header>
