@@ -9,8 +9,8 @@
                 <br>
                 <a href="javascript:void(0);" target="_blank">ibodao.com
                 </a> <br>
-               备案号：<a href="http://www.beian.miit.gov.cn" target="_blank"> {{$siteSeting['copyright']}}
-				</a>
+                <a href="http://www.beian.miit.gov.cn" target="_blank"> {{$siteSeting['copyright']}}
+				</a>|{{$siteSeting['email']}}版权所有
             </span>
         </p>
     </div>
