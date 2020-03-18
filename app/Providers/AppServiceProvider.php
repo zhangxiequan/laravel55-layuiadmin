@@ -36,6 +36,9 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('home.base', function ($view) use($site){
             $view->with('siteSeting',$site);
         });
+        view()->composer('home.index.index', function ($view) use($site){
+            $view->with('siteSeting',$site);
+        });
     }
 
     /**
