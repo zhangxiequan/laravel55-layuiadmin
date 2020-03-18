@@ -62,5 +62,17 @@ class LoginController extends Controller
     {
         return Auth::guard();
     }
-
+    /*
+     * 重新登录验证
+     */
+    protected function validateLogin(Request $request){
+        $this->validate($request, [
+            $this->username() => 'required',
+            'password' => 'required',
+            'vercode' => 'required|captcha',
+        ],[
+            'vercode.required' => '验证码不能为空',
+            'vercode.captcha' => '验证码不正确',
+        ]);
+    }
 }
