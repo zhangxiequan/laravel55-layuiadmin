@@ -132,9 +132,7 @@
                     </div>
                     <div class="tie-input-bar">
                         <div class="input-box" ne-id="tieBox" ne-tmpl="formTpl">
-                                    <textarea rows="8" cols="80" class="tie-textarea" id="js-pl-textarea"
-                                              placeholder="吐槽、鼓励，想说啥就说啥！" name="content">
-                                    </textarea>
+                                    <textarea rows="8" cols="80" class="tie-textarea" id="js-pl-textarea" placeholder="吐槽、鼓励，想说啥就说啥！" name="content"></textarea>
                             <div class="tie-submit-row">
                                 <div class="user-bar" ne-id="userBar" ne-tmpl="userBar">
                                     <input type="button" id="js-pl-submit" class="tie-submit-btn" value="发表评论"
@@ -169,10 +167,7 @@
                         <div class="tie-i-mask">
                         </div>
                         <div class="tie-i-wrap">
-                        </div>
-                        <iframe id="yun-tie-data-ifrm-923" src="https://api.gentie.163.com/pc/inner.html"
-                                style="width:0;height:0;visibility: hidden;">
-                        </iframe>
+                        </div> 
                     </div>
                 </div>
                 <div id="cloud-tie-wrapper" class="comments cloud-tie-wrapper">
