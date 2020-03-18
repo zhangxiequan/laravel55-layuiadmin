@@ -28,11 +28,13 @@ class AppServiceProvider extends ServiceProvider
             $view->with('menus',$menus);
             $view->with('unreadMessage',$unreadMessage);
         });
-        view()->composer('home.sidebar', function ($view){
+        $site = Site::pluck('value','key');
+        view()->composer('home.sidebar', function ($view) use($site){
             $view->with('sidebarCategory',Category::all());
+            $view->with('siteSeting',$site);
         });
-        view()->composer('home.base', function ($view){
-            $view->with('siteSeting',Site::pluck('value','key'));
+        view()->composer('home.base', function ($view) use($site){
+            $view->with('siteSeting',$site);
         });
     }
 

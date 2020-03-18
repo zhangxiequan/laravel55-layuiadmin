@@ -1,4 +1,8 @@
 <?php
+
+//微信公众号路由
+Route::any('wechat','WeChatController@wechat');
+
 //文件上传接口，前后台共用
 Route::post('uploadImg', 'PublicController@uploadImg')->name('uploadImg');
 //发送短信
@@ -8,7 +12,9 @@ Route::post('/sendMsg', 'PublicController@sendMsg')->name('sendMsg');
 
 //支付
 Route::group(['namespace' => 'Home'], function () {
-    Route::get('/','IndexController@index')->name('home.index');
+    
+    Route::get('/','IndexController@siteInfo')->name('home.index.site_info');
+    
     Route::get('/index','IndexController@index')->name('home.index');
     Route::get('/show/{id}','IndexController@show')->name('home.show');
     //微信支付
