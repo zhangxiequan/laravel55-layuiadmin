@@ -7,11 +7,12 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cache;
 
-class IndexController extends Controller
+class IndexController extends BaseController
 {
     private $request;
     public function __construct(Request $request)
     {
+        parent::__construct();
         $this->request = $request;
     }
     public function index()
@@ -45,6 +46,12 @@ class IndexController extends Controller
             return Article::select(['*'])->with(['category:id,name','tags'])->findOrfail(['id'=>$id])->first();
         });
         return view('home.index.show',['info'=>$info]);
+    }
+    
+    
+    public function siteInfo()
+    {
+        return view('home.index.site_info',['siteSeting'=>$this->siteSeting]);
     }
 
 }
