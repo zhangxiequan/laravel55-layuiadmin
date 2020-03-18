@@ -12,10 +12,11 @@
                 </a>
                 <hgroup class="introduce">
                     <h5 class="nickname">
-                         彼岸繁华
+                        {{$siteSeting['nickname']}}
                     </h5>
                     <a href="javascript:;" title="全栈工程师" class="mail">
-                        QQ:376195259
+                        QQ:{{$siteSeting['qq']}}
+                        email:{{$siteSeting['email']}}
                     </a>
                 </hgroup>
             </div>

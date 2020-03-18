@@ -34,9 +34,27 @@
                     </div>
                 </div>
                 <div class="layui-form-item">
+                    <label for="" class="layui-form-label">联系人</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="nickname" value="{{ $config['nickname']??'' }}" lay-verify="required" placeholder="请输入联系人" class="layui-input" >
+                    </div>
+                </div>
+                <div class="layui-form-item">
                     <label for="" class="layui-form-label">电话</label>
                     <div class="layui-input-block">
                         <input type="text" name="phone" value="{{ $config['phone']??'' }}" lay-verify="required" placeholder="请输入电话" class="layui-input" >
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label">邮箱</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="email" value="{{ $config['email']??'' }}" lay-verify="required" placeholder="请输入邮箱" class="layui-input" >
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label">介绍</label>
+                    <div class="layui-input-block">
+                        <textarea class="layui-textarea" name="intro" cols="30" rows="5">{{ $config['intro']??'' }}</textarea>
                     </div>
                 </div>
                 <div class="layui-form-item">

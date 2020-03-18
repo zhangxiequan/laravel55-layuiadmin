@@ -9,7 +9,7 @@
                 </i>
             </a>
             <div class="flex-col header-title ellipsis">
-                彼岸繁华的博客
+                {{$siteSeting['nickname']}}的博客
             </div>
             @include('home.search')
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light"
@@ -22,10 +22,10 @@
     <header class="content-header index-header">
         <div class="container fade-scale">
             <h1 class="title">
-                彼岸繁华
+                {{$siteSeting['nickname']}}
             </h1>
             <h5 class="subtitle">
-                不只是做一名工程师，而是要成为一名工匠！
+                {{$siteSeting['intro']}}
             </h5>
         </div>
     </header>

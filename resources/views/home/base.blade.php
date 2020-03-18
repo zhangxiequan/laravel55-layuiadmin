@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#3F51B5">
     <title>{{$siteSeting['title']}} | @yield('title','记录点滴')</title>
     <meta name="keywords" content="@yield('keywords', $siteSeting['keywords'])" />
-    <meta name="description" content="@yield('description', '主营网站建设，移动app开发，微信公众号开发，小程序开发，域名申请、备案，阿里云服务器搭建、运维')" />
+    <meta name="description" content="@yield('description', $siteSeting['keywords'])" />
     <meta name="author" content="@yield('phone', $siteSeting['phone'])" />
     <link rel="stylesheet" href="/static/home/blog/css/style.css">
    {{-- <script>
