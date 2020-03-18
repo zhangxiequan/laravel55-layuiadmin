@@ -12,8 +12,8 @@ Route::post('/sendMsg', 'PublicController@sendMsg')->name('sendMsg');
 
 //支付
 Route::group(['namespace' => 'Home'], function () {
-    
-    Route::get('/','IndexController@siteInfo')->name('home.index.site_info');
+    Route::get('/','IndexController@index');
+//    Route::get('/','IndexController@siteInfo')->name('home.index.site_info');
     
     Route::get('/index','IndexController@index')->name('home.index');
     Route::get('/show/{id}','IndexController@show')->name('home.show');
