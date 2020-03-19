@@ -1,6 +1,6 @@
 
 ## 安装步骤
-- git clone  https://code.aliyun.com/ibodao/kpp.git
+- git clone laravel55-layuiadmin
 - 复制.env.example为.env
 - 配置.env里的数据库连接信息
 - composer update
